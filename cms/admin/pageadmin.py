@@ -369,6 +369,18 @@ class PageAdmin(admin.ModelAdmin):
             **get_deleted_objects_additional_kwargs
         )
 
+
+        # # This is bad and I should feel bad.
+        # if 'placeholder' in perms_needed:
+        #     perms_needed.remove('placeholder')
+
+        # if 'Seiten-Inhalt' in perms_needed:  # dwinter feel even worse in german version this is in german
+        #     perms_needed.remove('Seiten-Inhalt')
+
+        # if 'page content' in perms_needed:
+        #     perms_needed.remove('page content')
+
+
         if request.POST and not protected:  # The user has confirmed the deletion.
             if perms_needed:
                 raise PermissionDenied
