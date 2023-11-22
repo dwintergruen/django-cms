@@ -370,6 +370,7 @@ class PageAdmin(admin.ModelAdmin):
         )
 
 
+<<<<<<< HEAD
         # # This is bad and I should feel bad.
         # if 'placeholder' in perms_needed:
         #     perms_needed.remove('placeholder')
@@ -380,6 +381,10 @@ class PageAdmin(admin.ModelAdmin):
         # if 'page content' in perms_needed:
         #     perms_needed.remove('page content')
 
+=======
+        if 'page content' in perms_needed:
+            perms_needed.remove('page content')
+>>>>>>> fb9d17e87 (Remove specific German locale test)
 
         if request.POST and not protected:  # The user has confirmed the deletion.
             if perms_needed:
